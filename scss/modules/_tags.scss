@@ -1,0 +1,60 @@
+/* Tag links style */
+.tag-links {
+    padding-top: 8px;
+    display: inline-block;
+    //border: 1px solid red;
+    
+    i {
+        //height: 11px;
+        //line-height: 1.2727272727;
+        //border: 1px solid red;   
+    }
+}
+
+.tag-links a {
+	background-color: #999;
+	//border-radius: 2px;
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 900;
+	//line-height: 1.2727272727;
+	margin: 2px 6px 2px 0;
+	padding: 3px 7px;
+	position: relative;
+	text-transform: uppercase;
+    text-decoration: none;
+    //border: 1px solid blue;
+}
+
+.tag-links a:hover {
+	background-color: #41a62a;
+	color: #fff;
+}
+
+.tag-links a:before {
+	//border-top: 10px solid transparent;
+	//border-right: 8px solid #767676;
+	//border-bottom: 10px solid transparent;
+	content: "";
+	height: 0;
+	position: absolute;
+	top: 0;
+	//left: -8px;
+	width: 0;
+}
+
+.tag-links a:hover:before {
+	border-right-color: #41a62a;
+}
+
+//.tag-links a:after {
+//	background-color: #fff;
+//	border-radius: 50%;
+//	content: "";
+//	height: 4px;
+//	position: absolute;
+//	top: 8px;
+//	left: -2px;
+//	width: 4px;
+//}

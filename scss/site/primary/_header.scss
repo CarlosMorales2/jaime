@@ -1,0 +1,44 @@
+
+.site-header h1,
+.site-header h2 {
+	text-align: left;
+    padding: 0 20px;
+}
+.site-header h1 a,
+.site-header h2 a {
+	//font-family: 'PT Sans',sans-serif;
+	color: #515151;
+	display: inline-block;
+	text-decoration: none;
+}
+.site-header h1 a:hover,
+.site-header h2 a:hover {
+	color: #999;
+}
+.site-header h1 {
+	font-size: 50px;
+	font-size: 3.571rem;
+    font-weight: 700;
+	//margin-bottom: 12px;
+	//margin-bottom: 0.8571rem;
+}
+.site-header h2 {
+	font-size: 32px;
+	font-size: 2.286rem;
+	color: #757575;
+	font-weight: 400;
+}
+
+// Not implemented yet
+//.header-image {
+//	margin-top: 24px;
+//	margin-top: 1.714285714rem;
+//}
+
+@media screen and (min-width: 600px) {
+        .site-header {
+        padding: 24px;
+        padding: 1.714285714rem;
+        //border: 1px solid blue;
+    }
+}

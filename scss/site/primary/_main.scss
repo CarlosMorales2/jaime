@@ -1,0 +1,128 @@
+.site {
+    background: #fff;
+    overflow: hidden;
+    margin: 0 auto;
+    //border: 1px solid red;
+}
+
+.site-content {
+    @import "entry";
+    padding: 12px 24px;
+    //border: 1px solid red;
+}
+
+@import "archive";
+
+/* Footer */
+footer[role="contentinfo"] {
+    text-align: center;
+	border-top: 1px solid #ededed;
+	clear: both;
+	font-size: 24px;
+	font-size: 1.714rem;
+	line-height: 2;
+	max-width: 960px;
+	max-width: 68.571428571rem;
+	margin-top: 24px;
+	margin-top: 1.714285714rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 24px 0;
+	padding: 1.714285714rem 0;
+}
+footer[role="contentinfo"] a {
+	color: #686868;
+}
+footer[role="contentinfo"] a:hover {
+	color: #21759b;
+}
+
+@media screen and (min-width: 600px) {
+	.site {
+		margin: 0 auto;
+		//max-width: 960px;
+		//max-width: 68.571428571rem;
+		overflow: hidden;
+	}
+	.site-content {
+		float: right;
+		width: 82.104166667%;
+        padding: 12px 54px 24px 54px;
+        //border: 1px solid red;
+	}
+//    #content {
+//        padding: 0 48px;
+//    }
+	body.template-front-page .site-content,
+	body.single-attachment .site-content,
+	body.full-width .site-content {
+		width: 100%;
+	}
+
+	#respond form input[type="text"] {
+		width: 46.333333333%;
+	}
+	#respond form textarea.blog-textarea {
+		width: 79.666666667%;
+	}
+
+	.entry-page-image {
+		float: right;
+		margin-bottom: 0;
+		width: 47.916666667%;
+	}
+	.commentlist .children {
+		margin-left: 48px;
+		margin-left: 3.428571429rem;
+	}
+    .site-content {
+	    float: right;
+	    width: 70%;
+	}
+	.widget-area {
+	    float: left;
+	    width: 28%;
+        padding-top: 12px;
+    }
+    
+    footer[role="contentinfo"] {
+    text-align: left;
+	background-color: #ededed;
+	//clear: both;
+	//line-height: 2;
+    font-size: 30px;
+	font-size: 2.143rem;
+    max-width: 100%;
+    //max-width: 68.571428571rem;
+//	margin-top: 24px;
+//	margin-top: 1.714285714rem;
+//	margin-left: auto;
+//	margin-right: auto;
+	padding-left: 24px;
+	padding-left: 1.714285714rem;
+}
+}
+
+@media screen and (min-width: 960px) {
+	body .site {
+		//padding: 0 40px;
+		//padding: 0 2.857142857rem;
+		margin-bottom: 48px;
+		margin-bottom: 3.428571429rem;
+		//box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	}
+    #content {
+        //padding: 0 54px;
+    }
+}
+
+/* Large Screens (1200px and up)----------- */
+@media only screen 
+    and (min-width : 1200px) {
+        .site {
+        max-width: 1200px;
+        margin: 0 auto;
+}
+        
+
+}

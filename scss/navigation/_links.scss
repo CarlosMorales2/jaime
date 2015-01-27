@@ -1,0 +1,13 @@
+a {
+	color: $color_dark_blue;
+
+	&:visited {
+		color: $color_dark_blue;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color_light_blue;
+        text-decoration: none;
+	}
+}
