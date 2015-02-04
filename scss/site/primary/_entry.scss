@@ -77,6 +77,12 @@
         font-size: 1.714rem;
         border-left: 3px solid #FF5D5F;
     }
+    pre { 
+        background-color: darken(#fff, 2%);
+        padding: 14px;
+        color: #333;
+        border-bottom: 2px solid lighten(#41a62a, 20%);
+    }
 }
 
 .social-buttons {
