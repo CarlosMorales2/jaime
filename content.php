@@ -40,13 +40,20 @@
 		<footer class="entry-meta">			
 
 <?php if ( comments_open() ) : ?>
-    <div class="comments-link">
-       <i class="fa fa-comments"></i>
-        <?php comments_popup_link( '<span class="leave-reply">' . __( '¿Deseas comentar?' ) . '</span>', __( '1 Comentario' ), __( '% Comentarios') ); ?>
-				</div><!-- .comments-link -->
-				
 				<div class="social-buttons">
-   <span><i-share class="fa fa-share-alt"></i-share>compártelo</span>
+				
+    <?php 
+        $css_class = 'leave-reply';
+        $number    = (int) get_comments_number( get_the_ID() );
+
+        if ( $number > 1 )
+            $css_class = 'comments-link';
+        
+        comments_popup_link( 
+         __( 'Comentar', $css_class ), 
+         __( '1 comentario', $css_class ), 
+         __( '% comentarios'), $css_class ); 
+    ?>
     <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" class="twitter">
         Twitter</a>
     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="facebook">

@@ -17,8 +17,7 @@
  *
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
- * @package JaimeO_Olmo
- * @subpackage Jaime_Olmo
+ * @package Jaime
  * @since Jaime Olmo 1.0
  */
 
@@ -41,7 +40,7 @@ if ( ! isset( $content_width ) )
  *
  * @since Jaime Olmo 1.0
  */
-function jaime_setup() {
+function jaime_theme_setup() {
 	/*
 	 * Makes Jaime Olmo available for translation.
 	 *
@@ -75,7 +74,7 @@ function jaime_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 }
-add_action( 'after_setup_theme', 'jaime_setup' );
+add_action( 'after_setup_theme', 'jaime_theme_setup' );
 
 /**
  * Adds support for a custom header image.
@@ -469,6 +468,18 @@ function jaime_customize_preview_js() {
 	wp_enqueue_script( 'jaime-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20120827', true );
 }
 add_action( 'customize_preview_init', 'jaime_customize_preview_js' );
+
+// Function to add prism.css and prism.js to the site
+function add_prism() {
+    // Register prism.js file
+    wp_register_script(
+        'prismJS', // handle name for the script so we can register, de-register, etc.
+        get_stylesheet_directory_uri() . '/prism.js' // location of the prism.js file
+    );
+    // Enqueue the registered style and script files
+    wp_enqueue_script('prismJS');
+}
+add_action('wp_enqueue_scripts', 'add_prism');
 
 // =========================================================================
 // REMOVE JUNK FROM HEAD
